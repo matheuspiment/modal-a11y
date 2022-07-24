@@ -41,7 +41,7 @@ export const USERNAME = "matheuspiment";
 
 /**
  * Some of the libraries that implement accessible modals are `react-modal` and `@headlessui/react`.
- * 
+ *
  * I chose `headlessui` because it already fits `tailwindcss` - to have some styles that accomplish WCAG 2.1 AA.
  *  - In this example I just added `leading-normal` to accomplish the `Success Criterion 1.4.12 Text Spacing`.
  *

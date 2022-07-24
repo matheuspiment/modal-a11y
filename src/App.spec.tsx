@@ -1,7 +1,7 @@
 import React from "react";
 import { render, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { axe } from 'jest-axe';
+import { axe } from "jest-axe";
 
 import "../__mocks__/intersectionObserverMock";
 
@@ -24,9 +24,11 @@ describe("Modal", () => {
     });
 
     // Check 1.1.
-    expect(getByLabelText(
-      /Type in your username to confirm that you want to deactivate your account./
-    )).toHaveFocus();
+    expect(
+      getByLabelText(
+        /Type in your username to confirm that you want to deactivate your account./
+      )
+    ).toHaveFocus();
 
     // Testing with jest-axe.
     expect(await axe(getByRole("dialog"))).toHaveNoViolations();
@@ -69,7 +71,9 @@ describe("Modal", () => {
       /Type in your username to confirm that you want to deactivate your account./
     );
     const btnCancel = getByRole("button", { name: /Cancel/ });
-    const btnConfirmDeactivation = getByRole("button", { name: /^Deactivate$/ });
+    const btnConfirmDeactivation = getByRole("button", {
+      name: /^Deactivate$/,
+    });
 
     expect(input).toHaveFocus();
 
